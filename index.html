@@ -6,9 +6,8 @@
 	<title>Sudoku Solver</title>
 	<link rel="stylesheet" href="style.css">
 	<script>
-		function testGrid() {
-			// Test grid
-			/*
+		function testGridEasy() {
+			// Test grid easy
 			const defaultGrid = [
 				[7, 8, 0, 4, 0, 0, 1, 2, 0],
 				[6, 0, 0, 0, 7, 5, 0, 0, 9],
@@ -20,8 +19,13 @@
 				[1, 2, 0, 0, 0, 7, 4, 0, 0],
 				[0, 4, 9, 2, 0, 6, 0, 0, 7]
 			];
-			*/
+			
 
+			fillGrid(defaultGrid);
+		}
+
+		function testGridHard() {
+			// Test grid hard
 			const defaultGrid = [
 				[0, 0, 0, 3, 0, 0, 0, 0, 0],
 				[0, 0, 0, 0, 0, 0, 0, 7, 8],
@@ -45,7 +49,10 @@
 	<div class="buttons">
 		<button onclick="resolveSudoku()">&#x1F9E0; Resolve</button>
 		<button onclick="clearSudoku()">&#x1F9F9; Clear</button>
-		<button onclick="testGrid()">&#x1F9EA; Test Grid</button>
+	</div>
+	<div class="buttons">
+		<button onclick="testGridEasy()">&#x1F9EA; Test Grid Easy</button>
+		<button onclick="testGridHard()">&#x1F9EA; Test Grid Hard</button>
 	</div>
 
 	<script src="sudokusolver.js"></script>

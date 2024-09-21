@@ -109,7 +109,7 @@ function resolveSudoku() {
 	if (isValidGrid()) {
 		console.log('Grid is valid.');
 	} else {
-		console.warn('Grid is not valid.');
+		alert('\u{1F914} Grid is not valid.');
 	}
 
 	// Second step: fill the cells with obvious values
@@ -136,29 +136,36 @@ function resolveSudoku() {
 		}
 	}
 
-	// Third step: use the backtracking algorithm to solve the rest of the grid
-
-	// Get the grid from the document
-	var grid = [];
-
-	for (let row = 1; row <= 9; row++) {
-		grid[row - 1] = [];
-		for (let col = 1; col <= 9; col++) {
-			grid[row - 1][col - 1] = parseInt(document.getElementById(`cell_${row}_${col}`).value) || 0;
-		}
-	}
-
-	// Solve the grid using the backtracking algorithm
-	if (backtrackSolveSudoku(grid, 0, 0)) {
-		// Fill the grid with the solved grid
-		fillGrid(grid);
-
+	// Check if the grid is already solved	
+	if (isGridSolved()) {
 		setTimeout(function () {
-			alert('\u{1F92F} Sudoku solved.');
+			alert('\u{1F92F} Sudoku solved!\n\u{1F913} The grid was solved by filling the obvious values.');
 		}, 100);
 	} else {
-		// No solution found
-		alert('\u{1F62D}No solution found.');
+		// Third step: use the backtracking algorithm to solve the rest of the grid
+
+		// Get the grid from the document
+		var grid = [];
+
+		for (let row = 1; row <= 9; row++) {
+			grid[row - 1] = [];
+			for (let col = 1; col <= 9; col++) {
+				grid[row - 1][col - 1] = parseInt(document.getElementById(`cell_${row}_${col}`).value) || 0;
+			}
+		}
+
+		// Solve the grid using the backtracking algorithm
+		if (backtrackSolveSudoku(grid, 0, 0)) {
+			// Fill the grid with the solved grid
+			fillGrid(grid);
+
+			setTimeout(function () {
+				alert('\u{1F92F} Sudoku solved!\n\u{1F916} The backtracking algorithm has been used.');
+			}, 100);
+		} else {
+			// No solution found
+			alert('\u{1F62D} No solution found!');
+		}
 	}
 }
 
@@ -255,6 +262,20 @@ function isValidCell(row, col, value, grid) {
 	}
 
 	// All checks passed, the cell is valid
+	return true;
+}
+
+function isGridSolved() {
+	// Check if the grid is solved
+	for (let row = 1; row <= 9; row++) {
+		for (let col = 1; col <= 9; col++) {
+			if (!document.getElementById(`cell_${row}_${col}`).value) {
+				return false;
+			}
+		}
+	}
+
+	// All cells are filled, the grid is solved
 	return true;
 }
 
