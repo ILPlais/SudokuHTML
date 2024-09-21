@@ -5,21 +5,23 @@ body {
 	align-items: center;
 	margin: 0;
 	padding: 20px;
+	background-color: #181818;
 }
 
 .sudoku-grid {
 	display: grid;
 	grid-template-columns: repeat(9, 1fr);
 	gap: 1px;
-	background-color: #000;
-	border: 3px solid #000;
+	background-color: #383838;
+	border: 2px solid #383838;
 	max-width: 450px;
 	width: 100%;
+	height: 100%;
+	aspect-ratio: 1 / 1;
 }
 
 .cell {
-	background-color: #fff;
-	aspect-ratio: 1;
+	background-color: #2D2D2D;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -34,9 +36,9 @@ body {
 	position: absolute;
 	right: -1px;
 	bottom: -1px;
-	width: 3px;
+	width: 2px;
 	height: 100%;
-	background-color: #000;
+	background-color: #383838;
 	display: none;
 }
 
@@ -46,8 +48,8 @@ body {
 	bottom: -1px;
 	left: 0;
 	width: 100%;
-	height: 3px;
-	background-color: #000;
+	height: 2px;
+	background-color: #383838;
 	display: none;
 }
 
@@ -61,37 +63,55 @@ body {
 }
 
 .cell-numbers {
-	font-size: 0.5em;
-	color: #000;
+	font-size: 0.4em;
+	color: #888;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	width: 100%;
+	height: 50%;
 	text-align: center;
 }
 
 .cell-numbers span {
-	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .cell-numbers span.highlighted {
-	color: #ddd;
+	color: #383838;
 }
 
 .cell input {
 	width: 100%;
 	height: 50%;
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1em;
 	border: none;
 	outline: none;
+	background-color: transparent;
+	color: #ddd;
+	padding: 0;
+	margin: 0;
+	appearance: textfield;
+	-webkit-appearance: textfield;
 }
 
 .buttons {
 	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 button {
 	padding: 10px 20px;
 	font-size: 1em;
 	margin: 0 10px;
+	background-color: #212121;
+	color: #ddd;
+	border-radius: 5px;
+	border-color: #343434;
+	border-style: solid;
+	cursor: pointer;
 }

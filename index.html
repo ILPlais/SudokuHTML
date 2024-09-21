@@ -3,16 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sudoku Grid</title>
+	<title>Sudoku Solver</title>
 	<link rel="stylesheet" href="style.css">
+	<script>
+		function testGrid() {
+			// Test grid
+			/*
+			const defaultGrid = [
+				[7, 8, 0, 4, 0, 0, 1, 2, 0],
+				[6, 0, 0, 0, 7, 5, 0, 0, 9],
+				[0, 0, 0, 6, 0, 1, 0, 7, 8],
+				[0, 0, 7, 0, 4, 0, 2, 6, 0],
+				[0, 0, 1, 0, 5, 0, 9, 3, 0],
+				[9, 0, 4, 0, 6, 0, 0, 0, 5],
+				[0, 7, 0, 3, 0, 0, 0, 1, 2],
+				[1, 2, 0, 0, 0, 7, 4, 0, 0],
+				[0, 4, 9, 2, 0, 6, 0, 0, 7]
+			];
+			*/
+
+			const defaultGrid = [
+				[0, 0, 0, 3, 0, 0, 0, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0, 7, 8],
+				[0, 0, 0, 1, 9, 5, 0, 0, 0],
+				[6, 0, 0, 0, 0, 0, 9, 0, 0],
+				[0, 0, 7, 0, 3, 0, 2, 0, 0],
+				[4, 0, 9, 5, 0, 0, 0, 0, 1],
+				[0, 9, 1, 0, 2, 8, 0, 0, 7],
+				[7, 0, 0, 0, 0, 3, 0, 0, 0],
+				[0, 5, 0, 7, 0, 0, 0, 4, 0],
+			];
+
+			fillGrid(defaultGrid);
+		}
+	</script>
 </head>
 <body>
 	<div class="sudoku-grid">
 		<!-- Sudoku grid cells will be generated here -->
 	</div>
 	<div class="buttons">
-		<button onclick="resolveSudoku()">Resolve</button>
-		<button onclick="clearSudoku()">Clear</button>
+		<button onclick="resolveSudoku()">&#x1F9E0; Resolve</button>
+		<button onclick="clearSudoku()">&#x1F9F9; Clear</button>
+		<button onclick="testGrid()">&#x1F9EA; Test Grid</button>
 	</div>
 
 	<script src="sudokusolver.js"></script>
