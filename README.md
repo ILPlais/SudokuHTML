@@ -2,6 +2,10 @@
 
 An HTML/JS sudoku solver
 
+![](https://tokei.rs/b1/github/ILPlais/SudokuHTML?category=code&style=flat)
+![](https://tokei.rs/b1/github/ILPlais/SudokuHTML?category=files&style=flat)
+![](https://tokei.rs/b1/github/ILPlais/SudokuHTML?showLanguage=true&languageRank=1&label=most%20used%20language&style=flat)
+
 ## How to use
 
 1. Clone the repository
