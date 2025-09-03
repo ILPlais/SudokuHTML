@@ -5,6 +5,8 @@ An HTML/JS sudoku solver
 ![](https://tokei.rs/b1/github/ILPlais/SudokuHTML?category=code&style=flat)
 ![](https://tokei.rs/b1/github/ILPlais/SudokuHTML?category=files&style=flat)
 ![](https://tokei.rs/b1/github/ILPlais/SudokuHTML?showLanguage=true&languageRank=1&label=most%20used%20language&style=flat)
+![](https://tokei.rs/b1/github/ILPlais/SudokuHTML?showLanguage=true&languageRank=2&label=2nd%20most%20used%20language&style=flat)
+![](https://tokei.rs/b1/github/ILPlais/SudokuHTML?showLanguage=true&languageRank=3&label=3rd%20most%20used%20language&style=flat)
 
 ## How to use
 
